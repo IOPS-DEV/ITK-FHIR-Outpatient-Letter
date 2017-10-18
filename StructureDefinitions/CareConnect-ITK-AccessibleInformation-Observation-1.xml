@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-18T12:41:59.838+01:00" />
+    <lastUpdated value="2017-10-18T14:13:48.424+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo" />
@@ -21,8 +21,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="The Observation resource is used for recording the accessible information requirements of a patient within the ITK Outpatient Letter message." />
-  <purpose value="The Observation resource is used for recording the accessible information requirements of a patient within the ITK Outpatient Letter message." />
+  <description value="This constrained Observation resource is used for recording the accessible information requirements of a patient within the ITK Outpatient Letter message." />
+  <purpose value="This constrained Observation resource is used for recording the accessible information requirements of a patient within the ITK Outpatient Letter message." />
   <copyright value="Copyright © 2017 Health and Social Care Information Centre. NHS Digital is the trading name of the Health and Social Care Information Centre." />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
