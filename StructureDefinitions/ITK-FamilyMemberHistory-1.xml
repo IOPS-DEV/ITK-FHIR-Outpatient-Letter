@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-19T16:17:25.545+01:00" />
+    <lastUpdated value="2017-10-20T10:42:47.118+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-FamilyMemberHistory-1" />
   <version value="0.0.1" />
@@ -1431,7 +1431,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -1548,12 +1548,12 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="FamilyMemberHistory.identifier.assigner.reference">
+    <element id="assigner.reference">
       <path value="FamilyMemberHistory.identifier.assigner.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Reference.reference" />
@@ -3311,7 +3311,7 @@
       <comment value="Very often the text is the same as a displayName of one of the codings." />
       <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source." />
       <min value="0" />
-      <max value="1" />
+      <max value="0" />
       <base>
         <path value="CodeableConcept.text" />
         <min value="0" />
@@ -4126,11 +4126,11 @@
       </base>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Observation-1" />
+        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Observation-1" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
       </type>
       <type>
         <code value="Reference" />
@@ -4794,7 +4794,7 @@
           <valueString value="ConditionCode" />
         </extension>
         <strength value="required" />
-        <description value="Identification of the condition experienced in the patient's family." />
+        <description value="SNOMED CT codes representing the identification of the condition experienced in the patient's family" />
         <valueSetReference>
           <reference value="https://fhir.nhs.uk/STU3/ValueSet/ITK-FamilyHistoryIllness-1" />
         </valueSetReference>
@@ -6156,7 +6156,7 @@
       <path value="FamilyMemberHistory.identifier.assigner" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1" />
       </type>
     </element>
     <element id="assigner.reference">
@@ -6209,6 +6209,13 @@
       </extension>
       <path value="FamilyMemberHistory.relationship.coding.display" />
       <min value="1" />
+    </element>
+    <element id="FamilyMemberHistory.relationship.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="FamilyMemberHistory.relationship.text" />
+      <max value="0" />
     </element>
     <element id="FamilyMemberHistory.gender">
       <path value="FamilyMemberHistory.gender" />
@@ -6265,20 +6272,16 @@
       <max value="0" />
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Observation-1" />
+        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Observation-1" />
       </type>
       <type>
         <code value="Reference" />
-        <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1" />
       </type>
       <type>
         <code value="Reference" />
         <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Condition-1" />
       </type>
-    </element>
-    <element id="reasonReference.reference">
-      <path value="FamilyMemberHistory.reasonReference.reference" />
-      <min value="1" />
     </element>
     <element id="FamilyMemberHistory.note">
       <path value="FamilyMemberHistory.note" />
@@ -6291,7 +6294,7 @@
           <valueString value="ConditionCode" />
         </extension>
         <strength value="required" />
-        <description value="Identification of the condition experienced in the patient's family." />
+        <description value="SNOMED CT codes representing the identification of the condition experienced in the patient's family" />
         <valueSetReference>
           <reference value="https://fhir.nhs.uk/STU3/ValueSet/ITK-FamilyHistoryIllness-1" />
         </valueSetReference>
