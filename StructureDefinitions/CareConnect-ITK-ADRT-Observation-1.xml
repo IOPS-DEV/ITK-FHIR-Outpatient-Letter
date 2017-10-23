@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-23T16:28:36.901+01:00" />
+    <lastUpdated value="2017-10-23T17:24:20.261+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo" />
@@ -6822,7 +6822,7 @@
       <isSummary value="true" />
       <binding>
         <strength value="required" />
-        <description value="Valueset incorporating SNOMED codes describing that the patient has made an Advance decision to refuse treatment.  This decision only applies at a future time when that person lacks capacity to consent to, or refuse, the specified treatment. " />
+        <description value="Valueset incorporating SNOMED codes describing that the patient has made an Advance decision to refuse treatment, as listed in the National Information Standard (SCCI1580).   This decision only applies at a future time when that person lacks capacity to consent to, or refuse, the specified treatment. " />
         <valueSetReference>
           <reference value="https://fhir.nhs.uk/STU3/ValueSet/ITK-ADRT-1" />
         </valueSetReference>
@@ -16485,7 +16485,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <description value="Valueset incorporating SNOMED codes describing that the patient has made an Advance decision to refuse treatment.  This decision only applies at a future time when that person lacks capacity to consent to, or refuse, the specified treatment. " />
+        <description value="Valueset incorporating SNOMED codes describing that the patient has made an Advance decision to refuse treatment, as listed in the National Information Standard (SCCI1580).   This decision only applies at a future time when that person lacks capacity to consent to, or refuse, the specified treatment. " />
         <valueSetReference>
           <reference value="https://fhir.nhs.uk/STU3/ValueSet/ITK-ADRT-1" />
         </valueSetReference>
