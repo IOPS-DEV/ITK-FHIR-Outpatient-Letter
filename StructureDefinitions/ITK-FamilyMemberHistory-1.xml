@@ -20,7 +20,7 @@
   </contact>
   <description value="A constrained FamilyMemberHistory resource designed to carry the record of relevant illness in family relations deemed to be significant to the care or health of the patient, including mental illness and suicide, genetic information." />
   <purpose value="A profile designed to carry the record of relevant illness in family relations deemed to be significant to the care or health of the patient, including mental illness and suicide, genetic information." />
-  <copyright value="Copyright © 2017 Health and Social Care Information Centre.&#xD;&#xA;NHS Digital is the trading name of the Health and Social Care Information Centre." />
+  <copyright value="© 2017 NHS Digital" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
