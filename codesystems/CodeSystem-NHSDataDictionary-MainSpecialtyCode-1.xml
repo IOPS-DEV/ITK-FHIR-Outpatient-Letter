@@ -4,7 +4,7 @@
  <extension url="http://hl7.org/fhir/StructureDefinition/codesystem-sourceReference">
   <valueUri value="http://www.datadictionary.nhs.uk/data_dictionary/attributes/m/main_specialty_code_de.asp"/>
  </extension>
- <url value="https://fhir.nhs.uk/STU3/CodeSystem/NHSDataDictionary-MainSpecialtyCode-1"/>
+ <url value="https://fhir.nhs.uk/STU3/NHSDataDictionary-MainSpecialtyCode-1"/>
  <version value="0.0.1"/>
  <name value="NHS Data Dictionary Main Specialty Code"/>
  <status value="draft"/>
