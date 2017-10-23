@@ -22,7 +22,7 @@
 <copyright value="Copyright ©2017 NHS Digital"/>
 	<compose>
 		<include>
-			<system value="https://fhir.nhs.uk/STU3/CodeSystem/NHSDataDictionary-MainSpecialtyCode-1"/>
+			<system value="https://fhir.nhs.uk/STU3/NHSDataDictionary-MainSpecialtyCode-1"/>
 		</include>
 		</compose>
 </ValueSet>
