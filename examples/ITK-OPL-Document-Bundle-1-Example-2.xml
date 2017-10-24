@@ -55,12 +55,12 @@
 					<reference value="urn:uuid:3abcaae6-dfbc-4e6d-80ed-912e64f3052f"/>
 				</encounter>
 				<!--The composition editing time, when the composition was last logically changed by the author.-->
-				<date value="2015-02-17T10:00:00+00:00"/>
+				<date value="2017-05-11T10:00:00+00:00"/>
 				<!--Identifies who is responsible for the information in the composition, not necessarily who typed it in-->
 				<author>
 					<reference value="urn:uuid:0586f1b1-c369-431f-baf3-973ab96501ce"/>
 				</author>
-				<title value="Discharge summary"/>
+				<title value="Outpatient letter"/>
 				<!--The code specifying the level of confidentiality of the Composition.-->
 				<confidentiality value="V"/>
 				<!--Identifies the organization responsible for ongoing maintenance of and access to the composition/document information.-->
@@ -86,15 +86,17 @@
 				<status value="finished"/>
 				<class>
 					<system value="http://hl7.org/fhir/v3-ActEncounterCode"/>
-					<code value="IMP"/>
-					<display value="inpatient encounter"/>
+					<code value="AMB"/>
+					<display value="ambulatory"/>
+					<!--The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.-->
 				</class>
 				<!--Specific type of encounter-->
 				<type>
 					<coding>
 						<system value="http://snomed.info/sct"/>
-						<code value="24882007"/>
-						<display value="Medical consultation on hospital inpatient"/>
+						<code value="17436001"/>
+						<display value="Medical consultation with outpatient"/>
+						<!--This is a member of the Refset Id 999000351000000101-->
 					</coding>
 				</type>
 				<!--Reference to the patient as the subject of the Encounter-->
