@@ -19,7 +19,7 @@
   </contact>
   <description value="A HealthcareService resource constrained to carry an organisation or location's service specialty in the context of an ITK message." />
   <purpose value="To carry an organisation or location's service specialty in the context of an ITK message." />
-  <copyright value="© 2017 NHS Digital" />
+  <copyright value="Copyright © 2017 NHS Digital" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
