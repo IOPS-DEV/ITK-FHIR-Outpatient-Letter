@@ -110,22 +110,34 @@
     <status value="finished"/>
     <class>
      <system value="http://hl7.org/fhir/v3-ActEncounterCode"/>
-     <code value="IMP"/>
-     <display value="inpatient encounter"/>
+     <code value="AMB"/>
+     <display value="ambulatory"/>
     </class>
     <!--Specific type of encounter-->
     <type>
      <coding>
-      <system value="http://snomed.info/sct"/>
-      <code value="24882007"/>
-      <display value="Medical consultation on hospital inpatient"/>
+     <system value="http://snomed.info/sct"/>
+      <code value="163381000000105"/>
+      <display value="Outpatient Clinic Attendance"/>
      </coding>
     </type>
     <!--Reference to the patient as the subject of the Encounter-->
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
-    <!--Add in some participants-->
+    <!--Reference to the participants present during the encounter-->
+    <participant>
+     <type>
+      <coding>
+       <system value="http://hl7.org/fhir/v3/ParticipationType"/>
+       <code value="PPRF"/>
+       <display value="primary performer"/>
+      </coding>
+     </type>
+     <individual>
+      <reference value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
+     </individual>
+    </participant>
     <period>
      <start value="2017-05-01T09:00:00+00:00"/>
      <end value="2017-05-01T09:45:00+00:00"/>
@@ -367,16 +379,48 @@
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
-    <!--Reference to the encounter-->
-    <context>
-     <reference value="urn:uuid:bd25f74e-2be5-4728-ac16-4771e2998cd2"/>
-    </context>
-    <!--Date is incorrect-->
-    <assertedDate value="2017-05-16"/>
-    <asserter>
-     <reference value="urn:uuid:5e414a77-d394-4248-a631-00e45ddb64a0"/>
-    </asserter>
+    <assertedDate value="2017-03-29"/>
    </Condition>
+  </resource>
+ </entry>
+   <!--Condition example 2-->
+ <entry>
+  <fullUrl value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
+  <resource>
+   <Condition>
+    <id value="4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
+    <meta>
+     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Condition-1"/>
+    </meta>
+    <identifier>
+     <system value="https://tools.ietf.org/html/rfc4122"/>
+     <value value="dc1e1c67-c503-4802-8db2-e9d3d5912807"/>
+    </identifier>
+    <clinicalStatus value="active"/>
+    <verificationStatus value="confirmed"/>
+    <category>
+     <coding>
+      <system value="https://fhir.hl7.org.uk/STU3/CareConnect-ConditionCategory-1"/>
+      <code value="diagnosis"/>
+      <display value="Diagnosis"/>
+     </coding>
+    </category>
+    <code>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="20301004"/>
+      <display value="Dysphasia"/>
+     </coding>
+    </code>
+    <subject>
+     <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
+    </subject>
+    <onsetDateTime value="2017-04-02T12:00:00+00:00"/>
+    <assertedDate value="2017-04-02"/>
+    <asserter>
+     <reference value="urn:uuid:d25fd1c6-2658-4db7-9af0-86c5f95e8ec9"/>
+    </asserter>
+</Condition>
   </resource>
  </entry>
  <!--Examination observation 1-->
@@ -447,7 +491,6 @@
  </entry>
  <!--Patient-Example-1-->
  <entry>
-  <!--Same guid as edis patient and same patient - correct-->
   <fullUrl value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
   <resource>
    <Patient>
