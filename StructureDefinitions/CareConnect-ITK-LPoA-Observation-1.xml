@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-23T17:23:16.464+01:00" />
+    <lastUpdated value="2017-10-24T10:24:04.455+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo" />
@@ -3763,7 +3763,7 @@
       <type>
         <code value="code" />
       </type>
-      <fixedCode value="186063005" />
+      <fixedCode value="224347004" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -3809,7 +3809,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="Power of attorney" />
+      <fixedString value="Power of attorney in existence" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -14421,7 +14421,7 @@
     <element id="Observation.code.coding:snomedCT.code">
       <path value="Observation.code.coding.code" />
       <min value="1" />
-      <fixedCode value="186063005" />
+      <fixedCode value="224347004" />
     </element>
     <element id="Observation.code.coding:snomedCT.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -14429,7 +14429,7 @@
       </extension>
       <path value="Observation.code.coding.display" />
       <min value="1" />
-      <fixedString value="Power of attorney" />
+      <fixedString value="Power of attorney in existence" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
