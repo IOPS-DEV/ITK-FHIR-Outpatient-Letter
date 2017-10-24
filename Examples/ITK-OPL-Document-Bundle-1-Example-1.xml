@@ -146,25 +146,10 @@
     <diagnosis>
      <!--Reason the encounter takes place (resource)-->
      <condition>
-      <!--Chief complaint - Need a additional condition to ref a condition for swallowing difficulties as the admission or discharge diagnosis-->
-      <reference value="urn:uuid:5590e1f9-c85b-4e14-be4c-efb6aa693fa5"/>
+      <reference value="urn:uuid:f26df24c-eeb5-44a1-b59c-f78a421d308c"/>
      </condition>
-     <role>
-      <coding>
-       <system value="http://hl7.org/fhir/diagnosis-role"/>
-       <code value="CC"/>
-       <display value="Chief complaint"/>
-      </coding>
-     </role>
     </diagnosis>
     <hospitalization>
-     <admitSource>
-      <coding>
-       <system value="http://hl7.org/fhir/admit-source"/>
-       <code value="emd"/>
-       <display value="From accident/emergency department"/>
-      </coding>
-     </admitSource>
      <!--	Category or kind of location after discharge-->
      <dischargeDisposition>
       <coding>
@@ -227,18 +212,9 @@
     <meta>
      <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-MedicationStatement-1"/>
     </meta>
-    <!--Must remove and ref elsewhere-->
-    <!--			<extension url="https://fhir.hl7.org.uk/StructureDefinition/Extension-CareConnect-MedicationFlag-1">
-					<valueReference>
-						<reference value="urn:uuid:f7fba03d-ea84-4849-b059-dee82cfd4f46"/> -->
-    <!--this ref will cause validator to crash is urn:uuid suffix added. entry 6-->
-    <!--
-					</valueReference>
-				</extension>-->
     <status value="active"/>
     <medicationReference>
      <reference value="urn:uuid:46c1a1b6-c2a5-44bc-a0df-80db5d4fb423"/>
-     <display value="Enteral+supplement feeds"/>
     </medicationReference>
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
@@ -288,7 +264,69 @@
    </MedicationStatement>
   </resource>
  </entry>
- <!--Medication Example 1-->
+ <!--Medication Statement Example 2-->
+ <entry>
+  <fullUrl value="urn:uuid:fb7a3452-a454-40c4-8958-5c1a0a186aca"/>
+  <resource>
+   <MedicationStatement>
+    <id value="fb7a3452-a454-40c4-8958-5c1a0a186aca"/>
+    <meta>
+     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-MedicationStatement-1"/>
+    </meta>
+    <status value="active"/>
+    <medicationCodeableConcept>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="11713004"/>
+       <display value="Water"/>
+      </coding>
+    </medicationCodeableConcept>
+    <subject>
+     <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
+    </subject>
+    <taken value="y"/>
+    <dosage>
+     <text value="1400ml a day"/>
+     <!--This is wrong - taken from edis example as a base template-->
+     <timing>
+      <repeat>
+       <frequency value="10"/>
+       <period value="1"/>
+       <periodUnit value="d"/>
+      </repeat>
+     </timing>
+     <asNeededBoolean value="false"/>
+     <route>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="225373002"/>
+       <display value="Percutaneous endoscopic gastrostomy feeding"/>
+      </coding>
+     </route>
+     <doseQuantity>
+      <value value="1400"/>
+      <unit value="millilitre"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mL"/>
+     </doseQuantity>
+     <maxDosePerPeriod>
+      <numerator>
+       <value value="140"/>
+       <unit value="millilitre"/>
+         <system value="http://unitsofmeasure.org"/>
+       <code value="mL"/>
+      </numerator>
+      <denominator>
+       <value value="10"/>
+       <system value="http://unitsofmeasure.org"/>
+       <code value="d"/>
+      </denominator>
+     </maxDosePerPeriod>
+    </dosage>
+   </MedicationStatement>
+  </resource>
+ </entry> 
+<!--Medication Example 1-->
  <entry>
   <fullUrl value="urn:uuid:46c1a1b6-c2a5-44bc-a0df-80db5d4fb423"/>
   <resource>
@@ -316,7 +354,7 @@
     <meta>
      <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Medication-Flag-1"/>
     </meta>
-    <!--This references the MedicationStatement - check this is correct.-->
+    <!--This references the MedicationStatement-->
     <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-ITK-MedicationFlagAssociation-1">
      <valueReference>
       <reference value="urn:uuid:11baa8fd-b670-47d1-ab3a-183488af5c6e"/>
@@ -347,7 +385,7 @@
    </Flag>
   </resource>
  </entry>
- <!--Diagnoses 1-->
+ <!--Condition example 1-->
  <entry>
   <fullUrl value="urn:uuid:abbf4c46-f97b-4b04-9248-4f99a21e1879"/>
   <resource>
@@ -421,6 +459,52 @@
      <reference value="urn:uuid:d25fd1c6-2658-4db7-9af0-86c5f95e8ec9"/>
     </asserter>
 </Condition>
+  </resource>
+ </entry>
+  <!--Procedure Example 1-->
+  <entry>
+  <fullUrl value="urn:uuid:f26df24c-eeb5-44a1-b59c-f78a421d308c"/>
+  <resource>
+   <Procedure>
+    <id value="f26df24c-eeb5-44a1-b59c-f78a421d308c"/>
+    <meta>
+     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Procedure-1"/>
+    </meta>
+    <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DateRecorded-1">
+     <valueDateTime value="2017-05-01"/>
+    </extension>
+    <identifier>
+     <system value="https://tools.ietf.org/html/rfc4122"/>
+     <value value="b60ce67d-2b02-4a95-87c8-4b28a6dfbecb"/>
+    </identifier>
+    <status value="completed"/>
+    <code>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="898511000000108"/>
+      <display value="Review of tube feeding regimen"/>
+     </coding>
+    </code>
+    <subject>
+     <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
+    </subject>
+       <context>
+     <reference value="urn:uuid:bd25f74e-2be5-4728-ac16-4771e2998cd2"/>
+    </context>
+    <performedDateTime value="2017-05-01T09:45:00+00:00"/>
+       <performer>
+     <actor>
+    <reference value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
+</actor>
+    </performer>
+    <location>
+<reference value="urn:uuid:68c6b037-e5e5-4fd5-a401-86dea9a9c126"/>
+</location>
+<!--Reference to the condition which is the reason why this procedure has been performed-->
+<reasonReference>
+<reference value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
+</reasonReference>
+   </Procedure>
   </resource>
  </entry>
  <!--Examination observation 1-->
