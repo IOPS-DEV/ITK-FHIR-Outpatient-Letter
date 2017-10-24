@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <meta>
-    <lastUpdated value="2017-10-20T09:14:01.144+01:00" />
+    <lastUpdated value="2017-10-24T10:54:59.952+01:00" />
   </meta>
   <url value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-PatientCarerConcerns-Contract-1" />
   <version value="0.0.1" />
@@ -2192,7 +2192,7 @@
       </base>
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-PatientCarerConcerns-Contract-1" />
+        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-PatientCarerConcerns-Observation-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -2305,7 +2305,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Contract.topic.reference">
+    <element id="topic.reference">
       <path value="Contract.topic.reference" />
       <short value="Literal reference, Relative, internal or absolute URL" />
       <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
@@ -19877,10 +19877,10 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/ITK-PatientCarerConcerns-Contract-1" />
+        <targetProfile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-PatientCarerConcerns-Observation-1" />
       </type>
     </element>
-    <element id="Contract.topic.reference">
+    <element id="topic.reference">
       <path value="Contract.topic.reference" />
       <min value="1" />
     </element>
