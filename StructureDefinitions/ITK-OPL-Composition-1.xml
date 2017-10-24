@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Composition" />
   <meta>
-    <lastUpdated value="2017-10-24T10:56:32.64+01:00" />
+    <lastUpdated value="2017-10-24T11:12:16.165+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="sd" />
