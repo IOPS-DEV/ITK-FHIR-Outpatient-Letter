@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Composition" />
   <meta>
-    <lastUpdated value="2017-10-24T11:12:16.165+01:00" />
+    <lastUpdated value="2017-10-25T02:26:23.027+01:00" />
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="sd" />
@@ -27755,7 +27755,7 @@
       <type>
         <code value="string" />
       </type>
-      <fixedString value="History " />
+      <fixedString value="History" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -65905,7 +65905,7 @@
       </extension>
       <path value="Composition.section.code.coding.display" />
       <min value="1" />
-      <fixedString value="History " />
+      <fixedString value="History" />
     </element>
     <element id="Composition.section:historySection.code.coding.userSelected">
       <path value="Composition.section.code.coding.userSelected" />
