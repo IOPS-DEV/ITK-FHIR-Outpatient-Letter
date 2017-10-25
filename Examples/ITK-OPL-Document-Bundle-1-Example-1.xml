@@ -37,16 +37,16 @@
       <reference value="urn:uuid:5ca24866-f34e-43d5-9d4a-c661beb9b5ae"/>
      </valueReference>
     </extension>
-     <!-- Information Recipient 4 - the patient's neurologist -->
+    <!-- Information Recipient 4 - the patient's neurologist -->
     <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ITK-InformationRecipient-1">
      <valueReference>
       <reference value="urn:uuid:d25fd1c6-2658-4db7-9af0-86c5f95e8ec9"/>
      </valueReference>
     </extension>
-      <!-- Information Recipient 5 - the hospital dietitian -->
+    <!-- Information Recipient 5 - the hospital dietitian -->
     <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-ITK-InformationRecipient-1">
      <valueReference>
-      <reference value="urn:uuid:d25fd1c6-2658-4db7-9af0-86c5f95e8ec9"/>
+      <reference value="urn:uuid:246a8b1a-24af-4690-b894-effe41c5638b"/>
      </valueReference>
     </extension>
     <!-- Extension to carry details of the Correspondence Care Setting Type. -->
@@ -91,6 +91,498 @@
     <custodian>
      <reference value="urn:uuid:f93186cd-b628-47e6-b97f-102ae75e6845"/>
     </custodian>
+    <section>
+     <title value="Attendance details"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="1077881000000105"/>
+       <display value="Attendance details"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Date of appointment/contact</th>
+          <td>01-May-2017 09:00</td>
+         </tr>
+         <tr>
+          <th>Consultation Method</th>
+          <td>Face-to-face</td>
+         </tr>
+         <tr>
+          <th>Responsible Healthcare professional</th>
+          <td>Dr. Gerald McManus</td>
+         </tr>
+         <tr>
+          <th>Seen by</th>
+          <td>Susan Blight</td>
+         </tr>
+         <tr>
+          <td>Role: Community Dietitian</td>
+         </tr>
+         <tr>
+          <td>Tel: (01234) 569870</td>
+         </tr>
+         <tr>
+          <th>Specialty</th>
+          <td>Dietetics and nutrition</td>
+         </tr>
+         <tr>
+          <th>Service</th>
+          <td>Community-based dietetics service</td>
+         </tr>
+         <tr>
+          <th>Outcome of Patient Attendance</th>
+          <td> Another appointment given</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+     <!--Specifies the order applied to the items in the section entries-->
+     <orderedBy>
+      <coding>
+       <system value="http://hl7.org/fhir/list-order"/>
+       <code value="system"/>
+       <display value="Sorted by System"/>
+      </coding>
+     </orderedBy>
+     <!--Reference to the encounter resource where information for this section can be found-->
+     <entry>
+      <reference value="urn:uuid:bd25f74e-2be5-4728-ac16-4771e2998cd2"/>
+     </entry>
+    </section>
+    <section>
+     <title value="Referrer details"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="1052891000000108"/>
+       <display value="Referrer details"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Referrer Name</th>
+          <td>Sugra Bibi</td>
+         </tr>
+         <tr>
+          <td>Role: Hospital Dietitian</td>
+         </tr>
+         <tr>
+          <td>Tel: (01234) 777870</td>
+         </tr>
+         <tr>
+          <td>Dietetics Department, St. Crispin's Hospital, Donaldstown, DO5 7TP</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
+    <section>
+     <title value="History"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="717121000000105"/>
+       <display value="History"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Presenting Complaint or Issue</th>
+          <td>Following a stroke Mr. Linacre acquired swallowing difficulties.</td>
+         </tr>
+         <tr>
+          <th>History of each presenting complaint or issue</th>
+          <td>During a recent admission to hospital Mr. Linacre was established on PEG tube feeding. The feeding tube insitu is a 15French PEG tube placed 05/04/17.</td>
+         </tr>
+         <tr>
+          <th>History since last contact</th>
+          <td>During a recent admission to hospital Mr. Linacre was established on PEG tube feeding. The feeding tube insitu is a 15French PEG tube placed 05/04/17. The regimen being: 1000mls Energy Multifibre Feed at 100mls/hours for 10 hours (9am-7pm) with 1400mls water given as divided flushes (e.g. 10x140mls) throughout the day e.g. before and after feed and with medications.  His weight is stable. Mr. Linacre has tolerated the regimen well.</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+     <orderedBy>
+      <coding>
+       <system value="http://hl7.org/fhir/list-order"/>
+       <code value="system"/>
+       <display value="Sorted by System"/>
+      </coding>
+     </orderedBy>
+     <!--Reference to the resources where information for this section can be found-->
+     <entry>
+      <reference value="urn:uuid:abbf4c46-f97b-4b04-9248-4f99a21e1879"/>
+     </entry>
+     <entry>
+      <reference value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
+     </entry>
+     <entry>
+      <reference value="urn:uuid:435a6755-5664-43f0-9472-8b62f1381568"/>
+     </entry>
+    </section>
+    <section>
+     <title value="Allergies and adverse reactions"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="886921000000105"/>
+       <display value="Allergies and adverse reactions"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <td>No known allergies</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
+    <section>
+     <title value="Examination findings"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="715851000000102"/>
+       <display value="Examination findings"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Examination findings</th>
+          <td>Weight 80kg, Height 175cm, BMI 26cm/2</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+     <orderedBy>
+      <coding>
+       <system value="http://hl7.org/fhir/list-order"/>
+       <code value="system"/>
+       <display value="Sorted by System"/>
+      </coding>
+     </orderedBy>
+     <!--Reference to the resource where information for this section can be found-->
+     <entry>
+      <reference value="urn:uuid:3beb965d-6ba3-4731-b702-4f701affd73b"/>
+     </entry>
+    </section>
+    <section>
+     <title value="Medications and medical devices"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="933361000000108"/>
+       <display value="Medications and medical devices"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Medication name</th>
+          <td>Energy Multifibre feed</td>
+         </tr>
+         <tr>
+          <th>Dose</th>
+          <td>1000 ml</td>
+         </tr>
+         <tr>
+          <th>Medication frequency</th>
+          <td>100 ml 10 times a day for 10 hours (9am-7pm)</td>
+         </tr>
+         <tr>
+          <th>Route</th>
+          <td>Via PEG tube</td>
+         </tr>
+         <tr>
+          <th>Medication recommendations</th>
+          <td>continue</td>
+         </tr>
+        </tbody>
+       </table>
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Medication name</th>
+          <td>Water</td>
+         </tr>
+         <tr>
+          <th>Dose</th>
+          <td>1400 ml</td>
+         </tr>
+         <tr>
+          <th>Medication frequency</th>
+          <td>Given as divided flushes (e.g. 10x140mls) throughout the day e.g. before and after feed and with medications.</td>
+         </tr>
+         <tr>
+          <th>Route</th>
+          <td>Flushes via PEG tube</td>
+         </tr>
+         <tr>
+          <th>Medication recommendations</th>
+          <td>continue</td>
+         </tr>
+         <tr>
+          <td>Mr. Linacre has been supplied with a feeding pump.</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+     <orderedBy>
+      <coding>
+       <system value="http://hl7.org/fhir/list-order"/>
+       <code value="system"/>
+       <display value="Sorted by System"/>
+      </coding>
+     </orderedBy>
+     <!--Reference to medication list-->
+     <entry>
+      <reference value="urn:uuid:cef7f8d5-78e3-4866-89f1-62470d6fd636"/>
+     </entry>
+    </section>
+    <section>
+     <title value="Diagnoses"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="887161000000102"/>
+       <display value="Diagnoses"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Diagnosis</th>
+          <td>Stroke</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+     <orderedBy>
+      <coding>
+       <system value="http://hl7.org/fhir/list-order"/>
+       <code value="system"/>
+       <display value="Sorted by System"/>
+      </coding>
+     </orderedBy>
+     <entry>
+      <reference value="urn:uuid:abbf4c46-f97b-4b04-9248-4f99a21e1879"/>
+     </entry>
+    </section>
+    <section>
+     <title value="Problems and issues"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="887151000000100"/>
+       <display value="Problems and issues"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Problems and Issues</th>
+          <td>Acquired swallowing difficulties</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
+    <section>
+     <title value="Clinical summary"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="887181000000106"/>
+       <display value="Clinical summary"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Clinical Summary</th>
+         </tr>
+         <tr>
+          <td>The estimated nutritional requirements for Mr. Linacre are Energy 1500kcla/day, Protein 80g/day, Fluid 2400mls/day.</td>
+         </tr>
+         <tr>
+          <td>Mr. Linacre is tolerating his feed and fluid flushes well as per his feeding regimen and he reports being compliant with his medication.</td>
+         </tr>
+         <tr>
+          <td>Mr. Linacre’s peg site has healed and was clean and dry and exposed on assessment.</td>
+         </tr>
+         <tr>
+          <td>Mr. Linacre’s bowels are opening daily (with no bowel meds), all pressure areas are intact and his weight is stable.</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
+    <section>
+     <title value="Procedures"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="887171000000109"/>
+       <display value="Procedures"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Procedure</th>
+          <td>Review of feeding regimen</td>
+         </tr>
+         <tr>
+          <th>Procedure</th>
+          <td>PEG</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+     <orderedBy>
+      <coding>
+       <system value="http://hl7.org/fhir/list-order"/>
+       <code value="system"/>
+       <display value="Sorted by System"/>
+      </coding>
+     </orderedBy>
+     <entry>
+      <reference value="urn:uuid:f26df24c-eeb5-44a1-b59c-f78a421d308c"/>
+     </entry>
+     <entry>
+      <reference value="urn:uuid:39a0d8f9-2c19-48cf-90f5-842d7659df05"/>
+     </entry>
+    </section>
+    <section>
+     <title value="Plan and requested actions"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="887201000000105"/>
+       <display value="Plan and requested actions"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Actions for healthcare professionals</th>
+          <td>A backpack has been ordered (05/05/17) so that Mr. Linacre can feed when he goes out during the day as he did not like feeding during the night when he was in hospital and feels restricted to stay at home at the moment.</td>
+         </tr>
+         <tr>
+          <td>Feeding Company Nurse has been requested (05/05/17) to train Mr. Linacre on use of pump.</td>
+         </tr>
+         <tr>
+          <th>Actions for patient or their carer</th>
+          <td>Mr. Linacre has been asked to continue on feeding regime.</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
+    <section>
+     <title value="Information and advice given"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="1052951000000105"/>
+       <display value="Information and advice given"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Information and advice given</th>
+          <td>Mr. Linacre was given the clinic contact details and a copy of his feeding regime with Trust guidance.</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
+    <section>
+     <title value="Person completing record"/>
+     <code>
+      <coding>
+       <system value="http://snomed.info/sct"/>
+       <code value="887231000000104"/>
+       <display value="Person completing record"/>
+      </coding>
+     </code>
+     <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+       <table width="100%">
+        <tbody>
+         <tr>
+          <th>Name</th>
+          <td>Susan Blight</td>
+         </tr>
+         <tr>
+          <th>Designation or role</th>
+          <td>Community Dietitian</td>
+         </tr>
+         <tr>
+          <th>Specialty</th>
+          <td>Community Dietitian</td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </text>
+    </section>
    </Composition>
   </resource>
  </entry>
@@ -116,7 +608,7 @@
     <!--Specific type of encounter-->
     <type>
      <coding>
-     <system value="http://snomed.info/sct"/>
+      <system value="http://snomed.info/sct"/>
       <code value="163381000000105"/>
       <display value="Outpatient Clinic Attendance"/>
      </coding>
@@ -196,14 +688,25 @@
       </coding>
      </flag>
      <item>
-      <!--same guid as for edis example-->
       <reference value="urn:uuid:11baa8fd-b670-47d1-ab3a-183488af5c6e"/>
+     </item>
+    </entry>
+    <entry>
+     <flag>
+      <coding>
+       <system value="https://fhir.nhs.uk/STU3/ITK-PatientMedicationChangeType-1"/>
+       <code value="09"/>
+       <display value="Active"/>
+      </coding>
+     </flag>
+     <item>
+      <reference value="urn:uuid:fb7a3452-a454-40c4-8958-5c1a0a186aca"/>
      </item>
     </entry>
    </List>
   </resource>
  </entry>
- <!--Medication Statement Example 1-->
+ <!--Medication Statement Example 1 - for the Multifibre feed-->
  <entry>
   <fullUrl value="urn:uuid:11baa8fd-b670-47d1-ab3a-183488af5c6e"/>
   <resource>
@@ -220,17 +723,8 @@
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
     <taken value="y"/>
-    <!--Update all dosage details and use edis example as basis-->
     <dosage>
-     <text value="100ml a day"/>
-     <!--This is wrong - taken from edis example as a base template-->
-     <timing>
-      <repeat>
-       <frequency value="1"/>
-       <period value="1"/>
-       <periodUnit value="d"/>
-      </repeat>
-     </timing>
+     <text value="1000mls Energy Multifibre Feed at 100mls/hours for 10 hours (9am-7pm)"/>
      <asNeededBoolean value="false"/>
      <route>
       <coding>
@@ -240,31 +734,26 @@
       </coding>
      </route>
      <doseQuantity>
-      <!--Check dose quantity and codes used-->
-      <value value="10"/>
-      <unit value="ml"/>
+      <value value="100"/>
+      <unit value="millilitre"/>
       <system value="http://unitsofmeasure.org"/>
-      <code value="ml"/>
+      <code value="mL"/>
      </doseQuantity>
      <maxDosePerPeriod>
-      <!--This could all be wrong - snomed value is for fluid-->
       <numerator>
        <value value="10"/>
-       <unit value="ml"/>
-       <system value="http://snomed.info/sct"/>
-       <code value="255765007"/>
       </numerator>
       <denominator>
-       <value value="100"/>
+       <value value="10"/>
        <system value="http://unitsofmeasure.org"/>
-       <code value="d"/>
+       <code value="h"/>
       </denominator>
      </maxDosePerPeriod>
     </dosage>
    </MedicationStatement>
   </resource>
  </entry>
- <!--Medication Statement Example 2-->
+ <!--Medication Statement Example 2 - for water-->
  <entry>
   <fullUrl value="urn:uuid:fb7a3452-a454-40c4-8958-5c1a0a186aca"/>
   <resource>
@@ -275,26 +764,18 @@
     </meta>
     <status value="active"/>
     <medicationCodeableConcept>
-      <coding>
-       <system value="http://snomed.info/sct"/>
-       <code value="11713004"/>
-       <display value="Water"/>
-      </coding>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="11713004"/>
+      <display value="Water"/>
+     </coding>
     </medicationCodeableConcept>
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
     <taken value="y"/>
     <dosage>
-     <text value="1400ml a day"/>
-     <!--This is wrong - taken from edis example as a base template-->
-     <timing>
-      <repeat>
-       <frequency value="10"/>
-       <period value="1"/>
-       <periodUnit value="d"/>
-      </repeat>
-     </timing>
+     <text value="1400mls water given as divided flushes (e.g. 10x140mls) throughout the day e.g. before and after feed and with medications."/>
      <asNeededBoolean value="false"/>
      <route>
       <coding>
@@ -304,29 +785,26 @@
       </coding>
      </route>
      <doseQuantity>
-      <value value="1400"/>
+      <value value="140"/>
       <unit value="millilitre"/>
       <system value="http://unitsofmeasure.org"/>
       <code value="mL"/>
      </doseQuantity>
      <maxDosePerPeriod>
       <numerator>
-       <value value="140"/>
-       <unit value="millilitre"/>
-         <system value="http://unitsofmeasure.org"/>
-       <code value="mL"/>
+       <value value="10"/>
       </numerator>
       <denominator>
        <value value="10"/>
        <system value="http://unitsofmeasure.org"/>
-       <code value="d"/>
+       <code value="h"/>
       </denominator>
      </maxDosePerPeriod>
     </dosage>
    </MedicationStatement>
   </resource>
- </entry> 
-<!--Medication Example 1-->
+ </entry>
+ <!--Medication Example 1-->
  <entry>
   <fullUrl value="urn:uuid:46c1a1b6-c2a5-44bc-a0df-80db5d4fb423"/>
   <resource>
@@ -385,12 +863,52 @@
    </Flag>
   </resource>
  </entry>
+ <!--Medication Flag Example 2-->
+ <entry>
+  <fullUrl value="urn:uuid:a0ffcad0-5177-4334-b990-412a80b19dc5"/>
+  <resource>
+   <Flag>
+    <id value="a0ffcad0-5177-4334-b990-412a80b19dc5"/>
+    <meta>
+     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Medication-Flag-1"/>
+    </meta>
+    <!--This references the MedicationStatement-->
+    <extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-CareConnect-ITK-MedicationFlagAssociation-1">
+     <valueReference>
+      <reference value="urn:uuid:fb7a3452-a454-40c4-8958-5c1a0a186aca"/>
+     </valueReference>
+    </extension>
+    <identifier>
+     <system value="https://tools.ietf.org/html/rfc4122"/>
+     <value value="76ef531e-d072-4f62-8c78-e16b35c188c8"/>
+    </identifier>
+    <status value="active"/>
+    <category>
+     <coding>
+      <system value="http://hl7.org/fhir/flag-category"/>
+      <code value="drug"/>
+      <display value="Drug"/>
+     </coding>
+    </category>
+    <code>
+     <coding>
+      <system value="https://fhir.hl7.org.uk/STU3/CareConnect-MedicationFlag-1"/>
+      <code value="continue-indefinitely"/>
+      <display value="Continue Indefinitely"/>
+     </coding>
+    </code>
+    <subject>
+     <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
+    </subject>
+   </Flag>
+  </resource>
+ </entry>
  <!--Condition example 1-->
  <entry>
   <fullUrl value="urn:uuid:abbf4c46-f97b-4b04-9248-4f99a21e1879"/>
   <resource>
    <Condition>
-    <id value="5590e1f9-c85b-4e14-be4c-efb6aa693fa5"/>
+    <id value="abbf4c46-f97b-4b04-9248-4f99a21e1879"/>
     <meta>
      <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Condition-1"/>
     </meta>
@@ -418,10 +936,13 @@
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
     <assertedDate value="2017-03-29"/>
+        <asserter>
+     <reference value="urn:uuid:d25fd1c6-2658-4db7-9af0-86c5f95e8ec9"/>
+    </asserter>
    </Condition>
   </resource>
  </entry>
-   <!--Condition example 2-->
+ <!--Condition example 2-->
  <entry>
   <fullUrl value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
   <resource>
@@ -447,7 +968,7 @@
      <coding>
       <system value="http://snomed.info/sct"/>
       <code value="20301004"/>
-      <display value="Dysphasia"/>
+      <display value="Dysphagia"/>
      </coding>
     </code>
     <subject>
@@ -458,11 +979,11 @@
     <asserter>
      <reference value="urn:uuid:d25fd1c6-2658-4db7-9af0-86c5f95e8ec9"/>
     </asserter>
-</Condition>
+   </Condition>
   </resource>
  </entry>
-  <!--Procedure Example 1-->
-  <entry>
+ <!--Procedure Example 1-->
+ <entry>
   <fullUrl value="urn:uuid:f26df24c-eeb5-44a1-b59c-f78a421d308c"/>
   <resource>
    <Procedure>
@@ -488,22 +1009,57 @@
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
-       <context>
+    <context>
      <reference value="urn:uuid:bd25f74e-2be5-4728-ac16-4771e2998cd2"/>
     </context>
     <performedDateTime value="2017-05-01T09:45:00+00:00"/>
-       <performer>
+    <performer>
      <actor>
-    <reference value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
-</actor>
+      <reference value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
+     </actor>
     </performer>
     <location>
-<reference value="urn:uuid:68c6b037-e5e5-4fd5-a401-86dea9a9c126"/>
-</location>
-<!--Reference to the condition which is the reason why this procedure has been performed-->
-<reasonReference>
-<reference value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
-</reasonReference>
+     <reference value="urn:uuid:68c6b037-e5e5-4fd5-a401-86dea9a9c126"/>
+    </location>
+    <!--Reference to the condition which is the reason why this procedure has been performed-->
+    <reasonReference>
+     <reference value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
+    </reasonReference>
+   </Procedure>
+  </resource>
+ </entry>
+ <!--Procedure Example 2-->
+ <entry>
+  <fullUrl value="urn:uuid:39a0d8f9-2c19-48cf-90f5-842d7659df05"/>
+  <resource>
+   <Procedure>
+    <id value="39a0d8f9-2c19-48cf-90f5-842d7659df05"/>
+    <meta>
+     <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-ITK-Procedure-1"/>
+    </meta>
+    <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-DateRecorded-1">
+     <valueDateTime value="2017-04-05"/>
+    </extension>
+    <identifier>
+     <system value="https://tools.ietf.org/html/rfc4122"/>
+     <value value="8979a463-8124-4c0f-b2ba-4cb6b8561394"/>
+    </identifier>
+    <status value="completed"/>
+    <code>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="235159007"/>
+      <display value="Percutaneous endoscopic gastrostomy"/>
+     </coding>
+    </code>
+    <subject>
+     <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
+    </subject>
+    <performedDateTime value="2017-04-05T08:55:00+00:00"/>
+    <!--Reference to the condition which is the reason why this procedure has been performed-->
+    <reasonReference>
+     <reference value="urn:uuid:4ee4465e-ed0d-4a62-b110-6fcfce3156e9"/>
+    </reasonReference>
    </Procedure>
   </resource>
  </entry>
@@ -532,15 +1088,18 @@
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
-    <effectiveDateTime value="2016-01-02T08:39:16+00:00"/>
+    <context>
+     <reference value="urn:uuid:bd25f74e-2be5-4728-ac16-4771e2998cd2"/>
+    </context>
+    <effectiveDateTime value="2017-05-01T09:45:00+00:00"/>
     <performer>
-     <reference value="urn:uuid:5e414a77-d394-4248-a631-00e45ddb64a0"/>
+     <reference value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
     </performer>
     <comment value="Weight 80kg, Height 175cm, BMI 26cm/2,"/>
    </Observation>
   </resource>
  </entry>
- <!--history observation 1-->
+ <!--history observation 2-->
  <entry>
   <fullUrl value="urn:uuid:435a6755-5664-43f0-9472-8b62f1381568"/>
   <resource>
@@ -565,11 +1124,11 @@
     <subject>
      <reference value="urn:uuid:4e17be8f-8694-47e3-8740-ccf306f6cf02"/>
     </subject>
-    <effectiveDateTime value="2016-01-02T08:39:16+00:00"/>
+    <effectiveDateTime value="2017-05-01T09:45:00+00:00"/>
     <performer>
-     <reference value="urn:uuid:5e414a77-d394-4248-a631-00e45ddb64a0"/>
+     <reference value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
     </performer>
-    <comment value="Mr. Linacre attended the community nutrition and dietetics outpatient clinic for review of feeding. Following a stroke Mr. Linacre acquired swallowing difficulties. During a recent admission to hospital Mr. Linacre was established on PEG tube feeding. The feeding tube insitu is a 15French PEG tube placed 05/04/17. The regimen being: 1000mls Energy Multifibre Feed at 100mls/hours for 10 hours (9am-7pm) with 1400mls water given as divided flushes (e.g. 10x140mls) throughout the day e.g. before and after feed and with medications.  His weight is stable."/>
+    <comment value="Mr. Linacre attended the community nutrition and dietetics outpatient clinic for review of feeding. Following a stroke Mr. Linacre acquired swallowing difficulties. During a recent admission to hospital Mr. Linacre was established on PEG tube feeding. The feeding tube insitu is a 15French PEG tube placed 05/04/17. The regimen being: 1000mls Energy Multifibre Feed at 100mls/hours for 10 hours (9am-7pm) with 1400mls water given as divided flushes (e.g. 10x140mls) throughout the day e.g. before and after feed and with medications. His weight is stable."/>
    </Observation>
   </resource>
  </entry>
@@ -586,27 +1145,15 @@
      <valueCodeableConcept>
       <coding>
        <system value="https://fhir.hl7.org.uk/STU3/CareConnect-EthnicCategory-1"/>
-       <code value="A"/>
-       <display value="British, Mixed British"/>
+       <code value="CA"/>
+       <display value="English"/>
       </coding>
      </valueCodeableConcept>
-    </extension>
-    <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReligiousAffiliation-1">
-     <valueCodeableConcept>
-      <coding>
-       <system value="http://snomed.info/sct"/>
-       <code value="80587008"/>
-       <display value="Jehovah's Witness"/>
-      </coding>
-     </valueCodeableConcept>
-    </extension>
-    <extension url="http://hl7.org/fhir/StructureDefinition/patient-cadavericDonor">
-     <valueBoolean value="false"/>
     </extension>
     <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ResidentialStatus-1">
      <valueCodeableConcept>
-      <coding>
-       <system value="https://fhir.hl7.org.uk/CareConnect-ResidentialStatus-1"/>
+     <coding>
+        <system value="https://fhir.hl7.org.uk/STU3/CareConnect-ResidentialStatus-1"/>
        <code value="H"/>
        <display value="UK Resident"/>
       </coding>
@@ -615,7 +1162,7 @@
     <extension url="https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-TreatmentCategory-1">
      <valueCodeableConcept>
       <coding>
-       <system value="https://fhir.hl7.org.uk/CareConnect-TreatmentCategory-1"/>
+        <system value="https://fhir.hl7.org.uk/STU3/CareConnect-TreatmentCategory-1"/>
        <code value="8"/>
        <display value="Not applicable"/>
       </coding>
@@ -676,13 +1223,23 @@
       </valueCodeableConcept>
      </extension>
      <system value="https://fhir.nhs.uk/Id/nhs-number"/>
-     <value value="61033451188"/>
+     <value value="123456789"/>
+    </identifier>
+    <identifier>
+     <system value="https://fhir.nhs.uk/Id/local-patient-identifier"/>
+     <value value="TL98765"/>
     </identifier>
     <active value="true"/>
     <name>
-     <use value="usual"/>
+     <use value="official"/>
      <family value="Linacre"/>
      <given value="Thomas"/>
+     <prefix value="Mr"/>
+    </name>
+    <name>
+     <use value="usual"/>
+     <family value="Linacre"/>
+     <given value="Tom"/>
      <prefix value="Mr"/>
     </name>
     <telecom>
@@ -714,10 +1271,6 @@
     <meta>
      <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1"/>
     </meta>
-    <identifier>
-     <system value="https://fhir.nhs.uk/Id/sds-user-id"/>
-     <value value="A111111"/>
-    </identifier>
     <name>
      <family value="O`Reilly"/>
      <given value="C"/>
@@ -728,9 +1281,9 @@
      <value value="01234 956412"/>
      <use value="work"/>
     </telecom>
-     <address>
+    <address>
      <line value="Canvas Health Centre"/>
-     <city value="27, Acacia Road" />
+     <city value="27, Acacia Road"/>
      <postalCode value="BM9 6PM"/>
     </address>
    </Practitioner>
@@ -772,10 +1325,10 @@
      <given value="Doug"/>
      <prefix value="Mr"/>
     </name>
-    </Practitioner>
+   </Practitioner>
   </resource>
  </entry>
-  <!--Practitioner-Example-4-->
+ <!--Practitioner-Example-4-->
  <entry>
   <fullUrl value="urn:uuid:246a8b1a-24af-4690-b894-effe41c5638b"/>
   <resource>
@@ -789,15 +1342,15 @@
      <given value="Sugra"/>
      <prefix value="Ms"/>
     </name>
-     <address>
+    <address>
      <line value="St. Crispin's Hospital"/>
      <city value="Donaldstown"/>
      <postalCode value="DO5 7TP"/>
     </address>
-    </Practitioner>
+   </Practitioner>
   </resource>
  </entry>
-  <!--Practitioner-Example-5-->
+ <!--Practitioner-Example-5-->
  <entry>
   <fullUrl value="urn:uuid:2c064afa-dbd6-44b8-86e6-a3e7fbdbcb48"/>
   <resource>
@@ -818,14 +1371,14 @@
     </telecom>
     <address>
      <line value="Canvas Health Centre"/>
-     <city value="27, Acacia Road" />
+     <city value="27, Acacia Road"/>
      <postalCode value="BM9 6PM"/>
     </address>
-    </Practitioner>
+   </Practitioner>
   </resource>
  </entry>
  <!--Practitioner roles-->
-  <entry>
+ <entry>
   <fullUrl value="urn:uuid:2b103117-a783-4a66-a0de-f308cd6b63cf"/>
   <resource>
    <PractitionerRole>
@@ -849,7 +1402,7 @@
    </PractitionerRole>
   </resource>
  </entry>
-   <entry>
+ <entry>
   <fullUrl value="urn:uuid:2e9585bc-4a09-4a06-8862-5a8cb6198fa7"/>
   <resource>
    <PractitionerRole>
@@ -863,17 +1416,17 @@
     <organization>
      <reference value="urn:uuid:12bba528-a08a-448b-946b-7e8008044025"/>
     </organization>
-     <specialty>
-   <coding>
- <system value="http://snomed.info/sct"/>
-    		<code value="56397003"/>
-		<display value="Neurologist"/>
-		</coding>
-</specialty>
+    <specialty>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="56397003"/>
+      <display value="Neurologist"/>
+     </coding>
+    </specialty>
    </PractitionerRole>
   </resource>
  </entry>
-    <entry>
+ <entry>
   <fullUrl value="urn:uuid:2bba2b2b-2b55-43ef-9b27-7ccf374cbaed"/>
   <resource>
    <PractitionerRole>
@@ -887,17 +1440,17 @@
     <organization>
      <reference value="urn:uuid:b945154b-114f-4da3-98fb-7f6978083e9b"/>
     </organization>
-     <specialty>
-   <coding>
- <system value="http://snomed.info/sct"/>
-    		<code value="106292003"/>
-		<display value="Professional nurse"/>
-		</coding>
-</specialty>
+    <specialty>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="106292003"/>
+      <display value="Professional nurse"/>
+     </coding>
+    </specialty>
    </PractitionerRole>
   </resource>
  </entry>
-   <entry>
+ <entry>
   <fullUrl value="urn:uuid:ea8932d8-e341-46e3-849f-0fa24f48b5fc"/>
   <resource>
    <PractitionerRole>
@@ -911,13 +1464,13 @@
     <organization>
      <reference value="urn:uuid:12bba528-a08a-448b-946b-7e8008044025"/>
     </organization>
-   <specialty>
-   <coding>
- <system value="http://snomed.info/sct"/>
-    		<code value="309399009"/>
-		<display value="Hospital dietitian"/>
-		</coding>
-</specialty>
+    <specialty>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="309399009"/>
+      <display value="Hospital dietitian"/>
+     </coding>
+    </specialty>
    </PractitionerRole>
   </resource>
  </entry>
@@ -936,15 +1489,15 @@
      <reference value="urn:uuid:f93186cd-b628-47e6-b97f-102ae75e6845"/>
     </organization>
     <specialty>
-   <coding>
- <system value="http://snomed.info/sct"/>
-    		<code value="60008001"/>
-		<display value="Community dietitian"/>
-		</coding>
-</specialty>
+     <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="60008001"/>
+      <display value="Community dietitian"/>
+     </coding>
+    </specialty>
     <location>
-    <reference value="urn:uuid:68c6b037-e5e5-4fd5-a401-86dea9a9c126"/>
-</location>
+     <reference value="urn:uuid:68c6b037-e5e5-4fd5-a401-86dea9a9c126"/>
+    </location>
    </PractitionerRole>
   </resource>
  </entry>
@@ -976,7 +1529,7 @@
     </telecom>
     <telecom>
      <system value="email"/>
-     <value value="Admin@MMC.co.uk"/>
+     <value value="Admin@chc.nhs.uk"/>
     </telecom>
     <address>
      <use value="work"/>
@@ -1022,36 +1575,6 @@
  </entry>
  <!--Organization-Example-3-->
  <entry>
-  <fullUrl value="urn:uuid:01bb1ccc-577b-4a4a-9fb0-9c8fe9f21fa3"/>
-  <resource>
-   <Organization>
-    <id value="01bb1ccc-577b-4a4a-9fb0-9c8fe9f21fa3"/>
-    <meta>
-     <profile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1"/>
-    </meta>
-    <type>
-     <coding>
-      <system value="http://hl7.org/fhir/organization-type"/>
-      <code value="prov"/>
-      <display value="Healthcare Provider"/>
-     </coding>
-    </type>
-    <name value="Adobe Health Centre"/>
-    <telecom>
-     <system value="phone"/>
-     <value value="01234 956412"/>
-     <use value="work"/>
-    </telecom>
-    <address>
-     <line value="Adobe Health Centre"/>
-     <line value="27 Acacia Road"/>
-     <postalCode value="BM9 6PM"/>
-    </address>
-   </Organization>
-  </resource>
- </entry>
-  <!--Organization-Example-4-->
- <entry>
   <fullUrl value="urn:uuid:b945154b-114f-4da3-98fb-7f6978083e9b"/>
   <resource>
    <Organization>
@@ -1085,7 +1608,7 @@
    </Organization>
   </resource>
  </entry>
-   <!--Organization-Example-5-->
+ <!--Organization-Example-4-->
  <entry>
   <fullUrl value="urn:uuid:f93186cd-b628-47e6-b97f-102ae75e6845"/>
   <resource>
@@ -1097,30 +1620,30 @@
     <type>
      <coding>
       <system value="http://hl7.org/fhir/organization-type"/>
-      <code value="prov"/>
-      <display value="Healthcare Provider"/>
+      <code value="team"/>
+      <display value="Organizational team"/>
      </coding>
     </type>
-    <name value="Donaldstown CCG"/>
+    <name value="Community Nutrition and Dietetics Department"/>
     <telecom>
      <system value="phone"/>
-     <value value="01234 956666"/>
+     <value value="01234 567890"/>
      <use value="work"/>
     </telecom>
     <telecom>
      <system value="email"/>
-     <value value="Admin@donaldstown.nhs.uk"/>
+     <value value="cndd@adobehc.nhs.uk"/>
     </telecom>
     <address>
      <use value="work"/>
-     <line value="20 Town Street"/>
+     <line value="Adobe Health Centre"/>
      <city value="Donaldstown"/>
-     <postalCode value="DO6 7XD "/>
+     <postalCode value="DO1 4XP"/>
     </address>
    </Organization>
   </resource>
  </entry>
-  <entry>
+ <entry>
   <fullUrl value="urn:uuid:68c6b037-e5e5-4fd5-a401-86dea9a9c126"/>
   <resource>
    <Location>
@@ -1137,7 +1660,7 @@
      </coding>
     </type>
     <managingOrganization>
-     <reference value="urn:uuid:f9f24f89-646b-4a19-a6b1-cabfa3b612e1"/>
+     <reference value="urn:uuid:f93186cd-b628-47e6-b97f-102ae75e6845"/>
     </managingOrganization>
    </Location>
   </resource>
